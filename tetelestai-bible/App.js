@@ -5,7 +5,8 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text style={styles.openscreen}>TETELESTAI BIBLE</Text>
+      <Text style={styles.subtitleopenscreen}>Igreja da Família</Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -14,8 +15,23 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
     alignItems: 'center',
     justifyContent: 'center',
   },
-});
+
+  openscreen: {
+    fontSize: 30,
+    color: "white",
+    fontWeight: "bold",
+    textAlign: 'center',
+  },
+
+  subtitleopenscreen: {
+    fontSize: 18,
+    color: "white",
+    textAlign: 'center',
+  }
+
+}
+);
