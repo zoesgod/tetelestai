@@ -7,10 +7,10 @@
     "platforms": ["android", "ios"],
     "orientation": "portrait",
     "primaryColor": "#000000",
-    "icon": "./assets/idf.png",
+    "icon": "/Users/heitor.neto/Documents/tetelestai/tetelestai-bible/assets/idf.png",
     "splash": {
-      "image": "./assets/idf.png",
-      "backgroundColor": "#FEF9B0"
+      "image": "/Users/heitor.neto/Documents/tetelestai/tetelestai-bible/assets/idf.png",
+      "backgroundColor": "#000000"
     },
     "assetBundlePatterns": ["**/*"],
     "android": {
