@@ -3,6 +3,14 @@
     "name": "bygrace",
     "slug": "bygrace",
     "version": "1.0.0",
+    "orientations": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle":"auto",
+    "splash":{
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#000000"
+    },
     "assetBundlePatterns": [
       "**/*"
     ]
