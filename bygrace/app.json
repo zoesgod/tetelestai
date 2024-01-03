@@ -1,16 +1,10 @@
 {
   "expo": {
-    "name": "bygrace",
-    "slug": "bygrace",
+    "name": "ByGrace",
+    "slug": "ByGrace",
     "version": "1.0.0",
-    "orientations": "portrait",
-    "icon": "./assets/icon.png",
+    "orientation": "portrait",
     "userInterfaceStyle":"auto",
-    "splash":{
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#000000"
-    },
     "assetBundlePatterns": [
       "**/*"
     ]
