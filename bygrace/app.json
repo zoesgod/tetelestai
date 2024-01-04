@@ -1,10 +1,8 @@
 {
   "expo": {
-    "name": "ByGrace",
-    "slug": "ByGrace",
+    "name": "bygrace",
+    "slug": "bygrace",
     "version": "1.0.0",
-    "orientation": "portrait",
-    "userInterfaceStyle":"auto",
     "assetBundlePatterns": [
       "**/*"
     ]

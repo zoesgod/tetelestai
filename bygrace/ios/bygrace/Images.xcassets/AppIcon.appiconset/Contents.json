@@ -3,7 +3,6 @@
     {
       "idiom" : "universal",
       "platform" : "ios",
-      "icon": "./assets/icon.png",
       "size" : "1024x1024"
     }
   ],
