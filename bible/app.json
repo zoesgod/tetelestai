@@ -1,8 +1,15 @@
 {
   "expo": {
-    "name": "bible",
-    "slug": "bible",
+    "name": "By Grace Bible",
+    "slug": "By Grace Bible",
     "version": "1.0.0",
+    "owner": "Zoes God",
+    "description":"A New Bible App",
+    "githubUrl":"https://github.com/zoesgod/bygrace",
+    "orientation": "default",
+    "scheme": "myapp",
+    "userInterfaceStyle": "auto",
+    "platforms": ["ios", "android", "web"],
     "assetBundlePatterns": [
       "**/*"
     ]
