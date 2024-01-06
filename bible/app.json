@@ -3,13 +3,17 @@
     "name": "By Grace Bible",
     "slug": "By Grace Bible",
     "version": "1.0.0",
-    "owner": "Zoes God",
+    "owner": "Zoe´s God",
     "description":"A New Bible App",
     "githubUrl":"https://github.com/zoesgod/bygrace",
     "orientation": "default",
     "scheme": "myapp",
     "userInterfaceStyle": "auto",
     "platforms": ["ios", "android", "web"],
+    "androidStatusBar": {
+      "backgroundColor": "#000000",
+      "translucent": false
+    },
     "assetBundlePatterns": [
       "**/*"
     ]
