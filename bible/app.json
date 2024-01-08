@@ -11,7 +11,7 @@
     "userInterfaceStyle": "auto",
     "platforms": ["ios", "android", "web"],
     "androidStatusBar": {
-      "backgroundColor": "#000000",
+      "backgroundColor": "#1B243D",
       "translucent": false
     },
     "assetBundlePatterns": [
