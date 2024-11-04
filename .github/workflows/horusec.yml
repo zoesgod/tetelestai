@@ -21,17 +21,17 @@ jobs:
 
   eslint:
     runs-on: ubuntu-latest
+    needs: build
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-      - name: ESLint Test
-        uses: AbdulRehman-1/eslint-action@latest
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }} # Optional
-          eslint-args: '--ignore-path=.gitignore'
-          eslintrc: false # Set this to true if you want to use your own .eslintrc rules
-          extensions: 'js,jsx,ts,tsx'
-          auto-auto-fix-before-test: false # Set this to true if want to format and fix all the lint issue before testing
-          annotations: true
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Run ESLint
+        run: |
+          npm install -g eslint
+          eslint . --ext .js,.jsx,.ts,.tsx
+      
+      - name: Run Snyk SAST
+        run: |
+          npm install -g snyk
+          snyk test --all-projects
