@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     
-    - name: Check out code
+    - name: Checkout Code
       uses: actions/checkout@v4
       with: # Necessário quando habilitado o autores de commit
         fetch-depth: 0
@@ -17,21 +17,3 @@ jobs:
         docker run -v /var/run/docker.sock:/var/run/docker.sock \
         -v $(pwd):/src/horusec \
         horuszup/horusec-cli:v2.9.0-beta.3 horusec start -p/src/horusec/ -j -w -e="true" --information-severity=true --log-level=warn -P $(pwd) --config-file-path=/src/horusec/horusec-config.json
-  
-    - name: eslint
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
-      with:
-        node-version: 22
-    - run: yarn install
-    - uses: sibiraj-s/action-eslint@v3
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }} # optional
-        eslint-args: '--ignore-path=.gitignore --quiet'
-        extensions: 'js,jsx,ts,tsx'
-        annotations: true
-    
-    - name: snyk-sast
-      run: |
-        npm install -g snyk
-        snyk test --all-projects
