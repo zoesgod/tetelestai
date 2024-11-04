@@ -11,5 +11,5 @@ permissions:
 
 jobs:
   continuous-integration:
-    uses: zoesgod/bygrace/.github/workflows/horusec.yml@maim
+    uses: zoesgod/bygrace/.github/workflows/horusec.yml@main
 
