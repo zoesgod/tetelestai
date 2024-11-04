@@ -12,5 +12,6 @@ jobs:
         fetch-depth: 0
     - name: Running Horusec Security
       run: |
-        curl -fsSL https://raw.githubusercontent.com/ZupIT/horusec/main/deployments/scripts/install.sh | bash -s latest-beta
-        horusec start -p="./" -j -w -e="true" --information-severity=true
+        docker run -v /var/run/docker.sock:/var/run/docker.sock -v $(pwd):/src horuszup/horusec-cli:latest horusec start -p /src -P $(pwd)\n
+      # curl -fsSL https://raw.githubusercontent.com/ZupIT/horusec/main/deployments/scripts/install.sh | bash -s latest-beta
+      # horusec start -p="./" -j -w -e="true" --information-severity=true
