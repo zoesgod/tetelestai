@@ -1,0 +1,18 @@
+name: Call Continuous Integration
+
+on:
+  push:
+    branches:
+      - main
+      - develop_tombamento
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  horusec:
+    uses: .github/workflows/actions/horusec.yml@main
+  eslint:
+    uses: .github/workflows/actions/eslint.yml@main
+
