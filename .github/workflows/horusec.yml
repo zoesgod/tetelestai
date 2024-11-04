@@ -28,7 +28,7 @@ jobs:
       - name: Run ESLint
         run: |
           npm init
-          npm install package.json
+          npm install bygrace
           npm init @eslint/config@latest
           npx eslint . --ext .js --ext .ts
         
