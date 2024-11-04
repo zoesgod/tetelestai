@@ -2,8 +2,8 @@ name: SecurityPipeline
 on: [push]
 permissions: read-all
 jobs:
-  horusec-security-sast:
-    name: horusec-security-sast
+  security-sast-horusec:
+    name: horusec
     runs-on: ubuntu-latest
     steps:
     - name: Check out code
