@@ -1,6 +1,7 @@
 name: SecurityPipeline
 on: [push]
 permissions: read-all
+
 jobs:
   security-sast:
     name: horusec
