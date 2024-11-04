@@ -12,7 +12,10 @@ jobs:
         fetch-depth: 0
     - name: Running Horusec Security
       run: |
-        curl -sSL https://get.docker.com/ | sh \
+        curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - \
+        sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu  $(lsb_release -cs)  stable" \
+        sudo apt-get update \
+        sudo apt-get install docker-ce \
         docker run -v /var/run/docker.sock:/var/run/docker.sock \
         -v $(pwd):/src/horusec \
         horuszup/horusec-cli:latest horusec start -p /src/horusec -P $(pwd) --config-file-path=/src/horusec/horusec-config.json -j -w
