@@ -28,7 +28,7 @@ jobs:
         uses: snyk/actions/python-3.8@master
         continue-on-error: true
       - name: Snyk test
-        run: snyk test
+        run: snyk code test ./ --sarif
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
       
