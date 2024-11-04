@@ -28,7 +28,7 @@ jobs:
       - name: Run ESLint
         run: |
           npm init
-          npm install
+          npm install package.json
           npm init @eslint/config@latest
           npx eslint . --ext .js --ext .ts
         
