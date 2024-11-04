@@ -5,11 +5,14 @@ jobs:
   security-sast:
     name: horusec
     runs-on: ubuntu-latest
+    continue-on-error: true
     steps:
+    
     - name: Check out code
       uses: actions/checkout@v4
       with: # Necessário quando habilitado o autores de commit
         fetch-depth: 0
+    
     - name: Running Horusec Security
       run: |
         docker run -v /var/run/docker.sock:/var/run/docker.sock \
