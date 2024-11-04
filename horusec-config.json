@@ -41,7 +41,7 @@
   "horusecCliMonitorRetryInSeconds": 10,
   "horusecCliPrintOutputType": "",
   "horusecCliProjectPath": "./",
-  "_coment": "horusecCliRepositoryAuthorization": "",
+  "//_coment": "horusecCliRepositoryAuthorization": "",
   "horusecCliRepositoryName": "",
   "horusecCliReturnErrorIfFoundVulnerability": true,
   "horusecCliRiskAcceptHashes": [],
