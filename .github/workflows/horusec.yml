@@ -20,13 +20,10 @@ jobs:
         horuszup/horusec-cli:v2.9.0-beta.3 horusec start -p/src/horusec/ -j -w -e="true" --information-severity=true --log-level=warn -P $(pwd) --config-file-path=/src/horusec/horusec-config.json
 
   snyk-sast:
-    using: "composite"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
       - name: Run Snyk to check for vulnerabilities
-      - uses: snyk/actions/golang@master
-      - uses: snyk/actions/node@master
       - uses: snyk/actions/python-3.8@master
         continue-on-error: true
         env:
