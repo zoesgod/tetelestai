@@ -14,7 +14,7 @@ jobs:
       run: |
         docker run -v /var/run/docker.sock:/var/run/docker.sock \
         -v $(pwd):/src/horusec \
-        horuszup/horusec-cli:v2.9.0-beta.3 horusec start -p/src/horusec/ -j -w -e="true" --information-severity=true --log-level=debug -P $(pwd) --config-file-path=/src/horusec/horusec-config.json
+        horuszup/horusec-cli:v2.9.0-beta.3 horusec start -p/src/horusec/ -j -w -e="true" --information-severity=true --log-level=trace -P $(pwd) --config-file-path=/src/horusec/horusec-config.json
       # docker run -v /var/run/docker.sock:/var/run/docker.sock -v $(pwd):/src horuszup/horusec-cli:latest horusec start -p /src -j -w -e true -P $(pwd)\n
       # curl -fsSL https://raw.githubusercontent.com/ZupIT/horusec/main/deployments/scripts/install.sh | bash -s latest-beta
       # horusec start -p="./" -j -w -e="true" --information-severity=true
