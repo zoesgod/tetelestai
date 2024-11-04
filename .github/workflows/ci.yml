@@ -10,8 +10,6 @@ permissions:
   id-token: write
 
 jobs:
-  horusec:
-    uses: zoesgod/bygrace/.github/workflows/horusec.yml@main
-  eslint:
-    uses: zoesgod/bygrace/.github/workflows/eslint.yml@main
+  continuous-integration:
+    uses: zoesgod/bygrace/.github/workflows/horusec.yml@maim
 
