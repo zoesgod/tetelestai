@@ -4,9 +4,7 @@ permissions: read-all
 jobs:
   security-sast:
     name: horusec
-    id: horusec
     runs-on: ubuntu-latest
-    continue-on-error: true
     steps:
     
     - name: Check out code
@@ -15,6 +13,7 @@ jobs:
         fetch-depth: 0
     
     - name: Running Horusec Security
+      id: horusec
       run: |
         docker run -v /var/run/docker.sock:/var/run/docker.sock \
         -v $(pwd):/src/horusec \
