@@ -1,8 +1,6 @@
 name: Lint
-
-on:
-  pull_request:
-  push:
+on: [push]
+permissions: read-all
 
 jobs:
   eslint:
@@ -12,7 +10,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: npm ci # or yarn install
+      - run: yarn install
       - uses: sibiraj-s/action-eslint@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }} # optional
