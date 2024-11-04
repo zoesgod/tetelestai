@@ -2,8 +2,8 @@ name: SecurityPipeline
 on: [push]
 permissions: read-all
 jobs:
-  horusec-security:
-    name: horusec-security
+  horusec-security-sast:
+    name: horusec-security-sast
     runs-on: ubuntu-latest
     steps:
     - name: Check out code
@@ -14,4 +14,4 @@ jobs:
       run: |
         docker run -v /var/run/docker.sock:/var/run/docker.sock \
         -v $(pwd):/src/horusec \
-        horuszup/horusec-cli:v2.9.0-beta.3 horusec start -p/src/horusec/ -j -w -e="true" --information-severity=true --log-level=warm -P $(pwd) --config-file-path=/src/horusec/horusec-config.json
+        horuszup/horusec-cli:v2.9.0-beta.3 horusec start -p/src/horusec/ -j -w -e="true" --information-severity=true --log-level=warn -P $(pwd) --config-file-path=/src/horusec/horusec-config.json
