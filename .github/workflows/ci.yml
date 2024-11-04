@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   horusec:
-    uses: /.github/workflows/horusec.yml@main
+    uses: .github/workflows/horusec.yml@main
   eslint:
-    uses: /.github/workflows/eslint.yml@main
+    uses: .github/workflows/eslint.yml@main
 
