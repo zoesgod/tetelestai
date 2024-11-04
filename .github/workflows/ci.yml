@@ -13,18 +13,17 @@ jobs:
         fetch-depth: 0
     
     - name: Running Horusec Security
-      id: horusec
       run: |
         docker run -v /var/run/docker.sock:/var/run/docker.sock \
         -v $(pwd):/src/horusec \
         horuszup/horusec-cli:v2.9.0-beta.3 horusec start -p/src/horusec/ -j -w -e="true" --information-severity=true --log-level=warn -P $(pwd) --config-file-path=/src/horusec/horusec-config.json
   
-    - name: ESLint
+    - name: eslint
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
       with:
-        node-version: 20
-    - run: npm ci # or yarn install
+        node-version: 22
+    - run: yarn install
     - uses: sibiraj-s/action-eslint@v3
       with:
         token: ${{ secrets.GITHUB_TOKEN }} # optional
