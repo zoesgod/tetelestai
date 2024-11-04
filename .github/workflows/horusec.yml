@@ -27,8 +27,6 @@ jobs:
       
       - name: Run ESLint
         run: |
-          npm init @eslint/config@latest
-          npx eslint .
           npx eslint . --ext .js --ext .ts --ext tsx --ext jsx
         
       - name: Run Snyk SAST
