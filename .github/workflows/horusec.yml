@@ -27,11 +27,8 @@ jobs:
       
       - name: Run ESLint
         run: |
-          npm init
-          npm install bygrace
-          npm init @eslint/config@latest
-          npx eslint . --ext .js --ext .ts
-        
+          npx eslint .
+          
       - name: Run Snyk SAST
         run: |
           npm install -g snyk
