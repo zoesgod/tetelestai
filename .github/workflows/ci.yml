@@ -1,14 +1,13 @@
 name: SecurityPipeline
-
 on: [push]
-
+permissions: read-all
 jobs:
   horusec-security:
     name: horusec-security
     runs-on: ubuntu-latest
     steps:
     - name: Check out code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with: # Necessário quando habilitado o autores de commit
         fetch-depth: 0
     - name: Running Horusec Security
