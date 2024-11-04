@@ -42,6 +42,7 @@
   "horusecCliPrintOutputType": "",
   "horusecCliProjectPath": "./",
   "horusecCliRepositoryName": "",
+  "horusecCliRepositoryAuthorization": "00000000-0000-0000-0000-000000000000",
   "horusecCliReturnErrorIfFoundVulnerability": true,
   "horusecCliRiskAcceptHashes": [],
   "horusecCliSeveritiesToIgnore": [],
