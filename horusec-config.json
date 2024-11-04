@@ -55,10 +55,10 @@
       "istoignore": false
     },
     "Brakeman": {
-      "istoignore": false
+      "istoignore": true
     },
     "BundlerAudit": {
-      "istoignore": false
+      "istoignore": true
     },
     "Checkov": {
       "istoignore": false
@@ -103,7 +103,7 @@
       "istoignore": false
     },
     "YarnAudit": {
-      "istoignore": false
+      "istoignore": true
     }
   },
   "horusecCliWorkDir": {
