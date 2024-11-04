@@ -19,8 +19,8 @@
   "horusecCliCustomRulesPath": "",
   "horusecCliDisableDocker": false,
   "horusecCliEnableCommitAuthor": false,
-  "horusecCliEnableGitHistoryAnalysis": false,
-  "horusecCliEnableInformationSeverity": false,
+  "horusecCliEnableGitHistoryAnalysis": true,
+  "horusecCliEnableInformationSeverity": true,
   "horusecCliFalsePositiveHashes": [
   ],
   "horusecCliFilesOrPathsToIgnore": [
