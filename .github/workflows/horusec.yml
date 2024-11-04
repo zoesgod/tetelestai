@@ -26,10 +26,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: yarn install
-      - uses: sibiraj-s/action-eslint@v3.0.1
+      - name: ESLint Test
+        uses: AbdulRehman-1/eslint-action@latest
         with:
-          token: ${{ secrets.GITHUB_TOKEN }} # optional
-          eslint-args: '--ignore-path=.gitignore --quiet'
+          github-token: ${{ secrets.GITHUB_TOKEN }} # Optional
+          eslint-args: '--ignore-path=.gitignore'
+          eslintrc: false # Set this to true if you want to use your own .eslintrc rules
           extensions: 'js,jsx,ts,tsx'
+          auto-auto-fix-before-test: false # Set this to true if want to format and fix all the lint issue before testing
           annotations: true
