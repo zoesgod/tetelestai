@@ -15,3 +15,13 @@ jobs:
         docker run -v /var/run/docker.sock:/var/run/docker.sock \
         -v $(pwd):/src/horusec \
         horuszup/horusec-cli:v2.9.0-beta.3 horusec start -p/src/horusec/ -j -w -e="true" --information-severity=true --log-level=warn -P $(pwd) --config-file-path=/src/horusec/horusec-config.json
+
+    - name: eslint
+        run: |
+          npm install -g eslint
+          eslint . --ext .js,.jsx,.ts,.tsx
+      
+      - name: snyk-sast
+        run: |
+          npm install -g snyk
+          snyk test --all-projects
